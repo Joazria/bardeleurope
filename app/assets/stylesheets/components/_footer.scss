@@ -1,0 +1,33 @@
+.footer {
+  color: #F4F4F4;
+  background: gray;
+
+      p {
+      font-size: 1em;
+
+      }
+
+      // i {
+      //   font-size: 2rem;
+      // }
+      a {
+        color: #d1d1d1;
+        & :hover {
+          color:white;
+          text-decoration: none;
+
+        }
+      }
+    }
+
+
+@media (max-width: 575.98px) {
+  img {
+        min-width: 50px;
+        height: auto;
+    }
+        h6 p {
+        font-size:0.8em;
+      }
+  }
+

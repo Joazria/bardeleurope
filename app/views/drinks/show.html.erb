@@ -1,0 +1,11 @@
+<% @drinks.each do |drink| %>
+<div class="card-product mt-2">
+    <%= image_tag drink.photo ,  class: "card-img-top ", alt: "Card image cap" %>
+  <div class="card-product-infos p-2">
+    <h2 class="text-uppercase"> <%= drink.name %> </h2>
+    <h6> <%= drink.description %></h6>
+    <h6 class="text-muted text-right m-0"> <%= drink.cl %> | <%= drink.price %></h6>
+
+  </div>
+</div>
+<% end %>
