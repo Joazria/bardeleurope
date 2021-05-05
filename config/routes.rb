@@ -2,8 +2,16 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  get '/drinks', to: 'pages#drinks'
+  get '/softs', to: 'pages#softs'
   get '/beers', to: 'pages#beers'
+  get '/chauds', to: 'pages#chauds'
+  get '/cafesfroids', to: 'pages#cafesfroids'
+  get '/jusfrais', to: 'pages#jusfrais'
+  get '/alcool', to: 'pages#alcool'
+  get '/cocktails', to: 'pages#cocktails'
+  get '/vins', to: 'pages#vins'
+  get '/dashboard', to: 'pages#dashboard'
+
 
    resources :drinks
 

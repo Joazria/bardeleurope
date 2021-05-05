@@ -1,2 +1,59 @@
-<h1>Drinks#edit</h1>
-<p>Find me in app/views/drinks/edit.html.erb</p>
+
+<div class="container">
+  <h5 class="mt-5">EDIT TON DRINK </h5>
+
+  <%= simple_form_for @drink do |f| %>
+
+        <%= f.input :category,
+                  label: 'C koi ton type de drink a toi ?',
+
+                    collection: ['Boisson Fraîche',
+                     'Boisson chaude',
+                     'Jus de fruits Frais',
+                     'Cocktail',
+                     'Bière',
+                     'Vin',
+                     'Alcool',
+                     'Thé & Café froid']%>
+        <%= f.input :subcat,
+                    label: 'Galopin / Demi / Pinte',
+                    collection: ['Galopin',
+                     'Demi','Pinte','Biére en bouteille']%>
+
+
+        <%= f.input :name,
+                    label: 'Comment ke tu lappel ton truk',
+                    placeholder: 'Putach Drink Name' %>
+
+        <%= f.input :description,
+                    as: :string,
+                    label: 'Il y a quoi dans ce que tu me fais boire',
+                    placeholder: 'Tequila, Gin, Voldka, et beaucoup autres ingrédients... ' %>
+
+        <%= f.input :cl,
+                    label: 'CL (et si zen vouloir +',
+                    collection: ['2cl',
+                     '4cl',
+                     '6cl',
+                     '10 cl',
+                     '12 cl',
+                     '12,5 cl',
+                     '15 cl',
+                     '20 cl',
+                     '25 cl',
+                     '33 cl',
+                     '50 cl',
+                     '75 cl',
+                     '1 L',
+                     '1,5 L']%>
+
+        <%= f.input :price,
+                    placeholder: '10,00' %>
+
+    <%= f.input :photo,
+                label: 'Ta vu la gueule de mon drink en Foto ',
+                as: :file %>
+
+
+    <p><%= f.submit "+ 1 DRINK DE PLUS", class: "btn btn-block btn-primary" %></p>
+  <% end %>
