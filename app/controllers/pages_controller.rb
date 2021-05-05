@@ -1,24 +1,22 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :drinks, :beers]
+  skip_before_action :authenticate_user!, only: [:home, :dashboard, :drinks, :beers, :softs, :chauds, :cafefroids, :jusfrais, :alcool, :cocktails, :vins]
+  before_action :set_drinks, only: [:home, :dashboard, :drinks, :beers, :softs, :chauds, :cafesfroids, :jusfrais, :alcool, :cocktails, :vins]
 
   def home
     # if params[:query].present?
     #   @drinks = Drink.search_by_name(params[:query])
     # else
-      @drinks = Drink.all
+      # @drinks = Drink.all
     # end
   end
 
-  def drinks
+  def dashboard
+    # @drinks = Drink.search_by_name(params[:query])
+  end
+
+  private
+
+  def set_drinks
     @drinks = Drink.all
   end
-
-  def beers
-    @drinks = Drink.all
-  end
-
-  def profile
-    @drinks = Drink.search_by_name(params[:query])
-  end
-
 end
