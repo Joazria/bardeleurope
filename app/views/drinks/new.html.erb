@@ -14,11 +14,13 @@
                      'Bière',
                      'Vin',
                      'Alcool',
+                     'liqueur',
+                      'Aperitif',
                      'Thé & Café froid']%>
         <%= f.input :subcat,
-                    label: 'Galopin / Demi / Pinte',
+                    label: 'Galopin / Demi / Pinte / Bouteille',
                     collection: ['Galopin',
-                     'Demi','Pinte','Biére en bouteille']%>
+                     'Demi','Pinte','Bouteille', '75 cl']%>
 
 
         <%= f.input :name,
@@ -33,8 +35,8 @@
         <%= f.input :cl,
                     label: 'CL (et si zen vouloir +',
                     collection: ['2cl',
-                     '4cl',
-                     '6cl',
+                     '4 cl',
+                     '6 cl',
                      '10 cl',
                      '12 cl',
                      '12,5 cl',
