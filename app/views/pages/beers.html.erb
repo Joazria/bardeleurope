@@ -1,5 +1,78 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/numama/image/upload/v1619053551/EUROPE/ribella2_p9vofv.png);">
+  <div class="container">
+    <h1>DÉCOUVREZ LE GOÛT DE LA VRAIS BIÉRE CORSE</h1>
+    <h5>La bière RIBELLA est une bière corse autonome.</h5>
+    <p> Elle est issue à 100% de l’agriculture locale. La RIBELLA est brassée, embouteillée et affinée à Patrimonio. L’orge, les malts, les houblons endémiques et les arômes naturels utilisés sont directement issus du terroir corse et de l’agriculture biologique.</p>
+
+  </div>
+</div>
+
+
+<div class="d-flex  flex-wrap justify-content-center">
+  <div class="card mt-3" style="width: 18rem;">
+  <img src="https://res.cloudinary.com/numama/image/upload/v1620309089/EUROPE/pression_abnsgi.png" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h5 class="card-title">RIBELLA – RIBELLA</h5>
+        <h6 class="card-title">Bière Bio Blonde Ale | 100% orge corse</h6>
+
+
+        <p class="card-text">Bière á la pression | La Ribella Ribella est une lager 100% corse créant le style de la Corsican Lager. Désaltérante et raffinée.</p>
+        <!-- <p class="card-text"><small class="text-muted">5 médailles d'argent au Concours Général de Paris, coup de coeur du Guide Hachette des Bières</small></p> -->
+        <p class="card-text text-right"><small class="text-muted"> Galopin | 12,5 cl | € 2,00 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Demi | 25 cl | € 3,80 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Pinte | 50 cl | € 7,40 </small></p>
+  </div>
+</div>
+<div class="card mt-3" style="width: 18rem;">
+  <img src="https://res.cloudinary.com/numama/image/upload/v1620309384/EUROPE/beerambre_olslys.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">SANTA – RIBELLA</h5>
+        <h6 class="card-title">Bière Bio Ambrée | Bière Bio Ambrée</h6>
+        <p class="card-text">Bière á la pression | Réconfortante et gourmande, cette Milk Stout à la noisette IGP de Cervione. </p>
+        <p class="card-text text-right"><small class="text-muted"> Galopin | 12,5 cl | € 2,30 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Demi | 25 cl | € 4,30 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Pinte | 50 cl | € 8,40 </small></p>
+
+  </div>
+</div>
+
+<div class="card mt-3" style="width: 18rem;">
+  <img src="https://res.cloudinary.com/numama/image/upload/v1620310426/EUROPE/Captura_de_Tela_2021-05-06_a%CC%80s_00.38.10_b78766.png" class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">Panché</h5>
+        <h6 class="card-title">Bière Bio Blonde Ale + Limonade</h6>
+        <p class="card-text text-right"><small class="text-muted"> Demi | 25 cl | € 3,80 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Pinte | 50 cl | € 7,40 </small></p>
+
+  </div>
+</div>
+
+<div class="card mt-3" style="width: 18rem;">
+  <img src="https://res.cloudinary.com/numama/image/upload/v1620310432/EUROPE/Captura_de_Tela_2021-05-06_a%CC%80s_00.31.47_zfrcji.png" class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">Monaco</h5>
+        <h6 class="card-title">Bière Bio Blonde Ale + Limonade + Grenadine</h6>
+        <p class="card-text text-right"><small class="text-muted"> Demi | 25 cl | € 3,80 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Pinte | 50 cl | € 7,40 </small></p>
+
+  </div>
+</div>
+
+<div class="card mt-3" style="width: 18rem;">
+  <img src="https://res.cloudinary.com/numama/image/upload/v1620310621/EUROPE/picon_xlflou.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">Picon Bière</h5>
+        <h6 class="card-title">Bière Bio Blonde Ale + Picon</h6>
+        <p class="card-text text-right"><small class="text-muted"> Demi | 25 cl | € 4,50 </small></p>
+        <p class="card-text text-right"><small class="text-muted"> Pinte | 50 cl | € 8,50 </small></p>
+
+  </div>
+</div>
+</div>
+
+
 <% if user_signed_in?  %>
-  <% @drinks.where(category: 'Bière').each do |drink| %>
+  <% @drinks.where(category: 'Bière', subcat: 'Bouteille').each do |drink| %>
   <div class="card-product mt-2">
       <%= image_tag drink.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
     <div class="card-product-infos p-2">
