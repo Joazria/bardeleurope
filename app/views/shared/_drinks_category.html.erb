@@ -1,89 +1,103 @@
-
-<div class="card-group text-uppercase mt-3">
-    <div class="col-sm-4 m-1">
-    <%= link_to softs_path do %>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234026/EUROPE/BOISSONSFRAICHES_q6qats.png)">
-      BOISSONS FRAÎCHES
-    </div>
-    <% end %>
-  </div>
-  <div class="col-sm-4 m-1">
-    <%= link_to chauds_path do  %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234228/EUROPE/BOISSONS_CHAUDES_cuvqq3.png)">
-      BOISSONS CHAUDES
-    </div>
-    <% end %>
-  </div>
-  <div class="col-sm-4 m-1">
-    <%= link_to cafesfroids_path do  %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234374/EUROPE/THE_FROID_gi4hpy.png)">
-      THÉ ET CAFÉ FROID
-    </div>
-    <% end %>
-  </div>
-  <div class="col-sm-4 m-1">
-        <%= link_to jusfrais_path do  %>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234533/EUROPE/JUSDEFRUITSFRAIS_v0s41t.png)">
-        JUS DE FRUITS FRAIS
+<div class="container mt-3 text-uppercase ">
+    <!-- <div class="row row-cols-1 row-cols-md-3 g-4"> -->
+    <div class="card-columns">
+        <div class="card">
+        <%= link_to softs_path do %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url(https://res.cloudinary.com/numama/image/upload/v1620234026/EUROPE/BOISSONSFRAICHES_q6qats.png)">
+          BOISSONS FRAÎCHES
+        </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
 
-  <div class="col-sm-4 m-1">
-    <%= link_to vins_path do  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053369/EUROPE/pinelli_uoeek0.png)">
-        Vin
+
+        <div class="card">
+          <%= link_to chauds_path do  %>
+          <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url(https://res.cloudinary.com/numama/image/upload/v1620234228/EUROPE/BOISSONS_CHAUDES_cuvqq3.png)">
+            BOISSONS CHAUDES
+          </div>
+          <% end %>
+        </div>
+
+
+    <div class="card">
+      <%= link_to cafesfroids_path do  %>
+      <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234374/EUROPE/THE_FROID_gi4hpy.png)">
+        THÉ / CAFÉ FROID
       </div>
       <% end %>
-  </div>
-  <div class="col-sm-4 m-1">
-      <%= link_to beers_path do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053551/EUROPE/ribella2_p9vofv.png)">
-          BIÉRE
+    </div>
+
+    <div class="card">
+          <%= link_to jusfrais_path do  %>
+
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234533/EUROPE/JUSDEFRUITSFRAIS_v0s41t.png)">
+          JUS DE FRUITS FRAIS
         </div>
       <% end %>
-  </div>
-  <div class="col-sm-4 m-1">
-      <%= link_to alcool_path do  %>
+    </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234887/EUROPE/alocol_qebnei.png)">
-          ALCOOL
+    <div class="card">
+      <%= link_to vins_path do  %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053369/EUROPE/pinelli_uoeek0.png)">
+          Vin
+        </div>
+        <% end %>
+    </div>
+    <div class="card">
+        <%= link_to beers_path do %>
+          <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053551/EUROPE/ribella2_p9vofv.png)">
+            BIÉRE
+          </div>
+        <% end %>
+    </div>
+    <div class="card">
+        <%= link_to alcool_path do  %>
+
+           <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620234887/EUROPE/alocol_qebnei.png)">
+            ALCOOL
+          </div>
+        <% end %>
+    </div>
+
+    <div class="card">
+      <%= link_to cocktails_path do  %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053648/EUROPE/cocktails_hg43il.jpg)">
+          Cocktail
         </div>
       <% end %>
-  </div>
+    </div>
 
-  <div class="col-sm-4 m-1">
-    <%= link_to cocktails_path do  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1619053648/EUROPE/cocktails_hg43il.jpg)">
-        Cocktail
-      </div>
-    <% end %>
-  </div>
+      <div class="card">
+      <%= link_to aperitifs_path do  %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620301693/EUROPE/apero_chogja.png)">
+          Aperitif & Alcool
+        </div>
+      <% end %>
+    </div>
 
-    <div class="col-sm-4 m-1">
-    <%= link_to aperitifs_path do  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620301693/EUROPE/apero_chogja.png)">
-        Aperitif
-      </div>
-    <% end %>
-  </div>
 
-    <div class="col-sm-4 m-1">
-    <%= link_to liqueurs_path do  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620301751/EUROPE/liqueur_ul5fdp.png)">
-        Liqueur
-      </div>
-    <% end %>
-  </div>
+      <div class="card">
+      <%= link_to liqueurs_path do  %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620301751/EUROPE/liqueur_ul5fdp.png)">
+          Liqueur
+        </div>
+      <% end %>
+    </div>
 
-    <div class="col-sm-4 m-1">
-    <%= link_to petitdejeuner_path do  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620302282/EUROPE/petitdej_iuztc2.png)">
-        Petit Dejeuner
-      </div>
-    <% end %>
-  </div>
+      <div class="card">
+      <%= link_to petitdejeuner_path do  %>
+        <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/numama/image/upload/v1620302282/EUROPE/petitdej_iuztc2.png)">
+          Petit Dejeuner
+        </div>
+      <% end %>
+    </div>
+
+
 </div>
+<!--   </div>
+ -->
+
+
 
