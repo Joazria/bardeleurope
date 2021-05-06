@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get '/alcool', to: 'pages#alcool'
   get '/cocktails', to: 'pages#cocktails'
   get '/vins', to: 'pages#vins'
+  get '/aperitifs', to: 'pages#aperitifs'
+  get '/liqueurs', to: 'pages#vins'
+  get '/petitdejeuner', to: 'pages#petitdejeuner'
+
   get '/dashboard', to: 'pages#dashboard'
 
 
