@@ -22,7 +22,7 @@ class FoodsController < ApplicationController
     @food.user = current_user
 
     if @food.save
-      redirect_to @food, notice: "Plat créé! Mmmmh J'adore les Donuts á la mayonnaise."
+      redirect_to foods_path, notice: "Plat créé! Mmmmh J'adore les Donuts á la mayonnaise."
     else
       render :new
     end
