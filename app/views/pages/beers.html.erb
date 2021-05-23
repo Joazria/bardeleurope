@@ -88,7 +88,7 @@
   <% end %>
 <% else %>
 
-  <% @drinks.where(category: 'Bière').each do |drink| %>
+  <% @drinks.where(category: 'Bière', subcat: 'Bouteille').each do |drink| %>
   <div class="card-product mt-2">
       <%= image_tag drink.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
     <div class="card-product-infos p-2">
