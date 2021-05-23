@@ -9,20 +9,7 @@
     <%= render 'shared/drinks_category' %>
 
   <h5 class="text-primary text-center mt-5">Boisson Fraîche</h5>
-
-    <% @drinks.where(category: 'Boisson Fraîche').each do |drink| %>
-          <h5 class="text-uppercase"> <%= drink.name %> </h5>
-
-        <div class="d-flex justify-content-between">
-          <h6> <%= drink.description %></h6>
-          <h6> <%= drink.cl %></h6>
-
-          <h6 class="text-muted"> € <%= drink.price %></h6>
-        </div>
-
-
-    <% end %>
-    <%#= render 'shared/softs' %>
+    <%= render 'shared/softs' %>
   <hr>
   <h1 class="text-primary text-center mt-3">Thé et Café froid</h1>
    <%= render 'shared/cafesfroids' %>

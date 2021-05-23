@@ -19,6 +19,12 @@
     width: clamp(120px, 100%, 180px) !important;
 
 }
+
+.card-beer {
+    width: clamp(300px, 100%, 180px) !important;
+    background: white;
+}
+
 .card-columns {
   display: grid;
   --card-width:  180px;

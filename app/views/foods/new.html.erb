@@ -1,0 +1,44 @@
+
+<div class="container">
+   <h5 class="mt-5">BIENVENUE Á LA CUISINE  </h5>
+
+  <h5 class="mt-5">Tu fais quoi á manger aujourd'hui ? </h5>
+
+  <%= simple_form_for @food do |f| %>
+
+        <%= f.input :category,
+                  label: 'Tu fais quoi á manger?',
+
+                    collection: ['Salade',
+                     'Migliaccioli',
+                     'Bruschetta',
+                     'Burger',
+                     'Hot Dog']%>
+
+
+        <%= f.input :name,
+                    label: 'Comment ke tu lappel ton plat',
+                    placeholder: 'Putach Good Food  ' %>
+
+        <%= f.input :description,
+                    as: :string,
+                    label: 'K est ce q tu as mis dans ton miam miam ',
+                    placeholder: 'Tequila, Gin, Voldka, et beaucoup autres ingrédients... ' %>
+
+
+        <%= f.input :price,
+                    placeholder: '10,00' %>
+
+    <%= f.input :photo,
+                label: 'Ta vu la gueule de ta bouffe ',
+                as: :file %>
+
+
+
+
+    <p><%= f.submit "ALLEZ GINETTE ! UN PLAT DE PLUS", class: "btn btn-block btn-primary" %></p>
+  <% end %>
+
+
+</div>
+
