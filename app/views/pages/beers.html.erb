@@ -87,6 +87,7 @@
   </div>
   <% end %>
 <% else %>
+
   <% @drinks.where(category: 'Bière').each do |drink| %>
   <div class="card-product mt-2">
       <%= image_tag drink.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
