@@ -29,8 +29,8 @@ class IcecreamsController < ApplicationController
   end
 
   def update
-    if @icecream.update(drink_params)
-      redirect_to @icecream, notice: "Glace updated! Forcément avec de la vodka c'est toujorus meilheurs."
+    if @icecream.update(icecream_params)
+      redirect_to icecreams_path, notice: "Glace updated! Forcément avec de la vodka c'est toujorus meilheurs."
     else
       render :edit
     end

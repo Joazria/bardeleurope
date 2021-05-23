@@ -29,8 +29,8 @@ class FoodsController < ApplicationController
   end
 
   def update
-    if @food.update(drink_params)
-      redirect_to @food, notice: "Plat updated! De la sardine avec du sanglier au beur de cacahuéte? t'es sur de ton coup."
+    if @food.update(food_params)
+      redirect_to foods_path, notice: "Plat updated! De la sardine avec du sanglier au beur de cacahuéte? t'es sur de ton coup."
     else
       render :edit
     end
