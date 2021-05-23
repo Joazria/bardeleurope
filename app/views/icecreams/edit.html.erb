@@ -1,2 +1,40 @@
-<h1>Icecreams#edit</h1>
-<p>Find me in app/views/icecreams/edit.html.erb</p>
+
+<div class="container">
+   <h5 class="mt-5">BIENVENUE CHEZ NOTRE MAITRE GLACIER   </h5>
+
+  <h5 class="mt-5">OElle est pas bonne ta glace au concombre ?  </h5>
+
+  <%= simple_form_for @icecream do |f| %>
+
+        <%= f.input :category,
+                  label: 'A priori tu vas faire une glace ? ',
+
+                    collection: ['Icecream']%>
+
+
+        <%= f.input :name,
+                    label: 'Comment ke tu lappel ta glace',
+                    placeholder: 'Putach IceCream  ' %>
+
+        <%= f.input :description,
+                    as: :string,
+                    label: 'K est ce q tu as mis dans ta glace',
+                    placeholder: 'Concombre, Avocat, Voldka, et beaucoup autres ingrédients... ' %>
+
+
+        <%= f.input :price,
+                    placeholder: '10,00' %>
+
+    <%= f.input :photo,
+                label: 'Elle ressemble á quoi ta glace au concombre',
+                as: :file %>
+
+
+
+
+    <p><%= f.submit "ALLEZ BERNADEET ! UNE GLACE CRÉÉE", class: "btn btn-block btn-primary" %></p>
+  <% end %>
+
+
+</div>
+
