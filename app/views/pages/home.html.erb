@@ -1,10 +1,13 @@
 <%= render 'shared/banner' %>
-
 <hr>
-
-<%= render 'shared/category' %>
+<% if DateTime.now >= Time.parse("15:00") && DateTime.now <= Date.today + 26.hours %>
+  <%= render 'shared/night_categories' %>
+<% elsif DateTime.now >= Time.pase("11:00") && DateTime.now < Time.parse("15:00")%>
+  <%= render 'shared/midday_categories' %>
+<% else %>
+  <%= render 'shared/morning_categories' %>
+<% end %>
 <hr>
-
 <%= render 'shared/intro' %>
 <!--
 <%#= render 'shared/intro' %>
