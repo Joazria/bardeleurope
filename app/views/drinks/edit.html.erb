@@ -7,15 +7,17 @@
         <%= f.input :category,
                   label: 'C koi ton type de drink a toi ?',
 
-                    collection: ['Aperitif',
+                    collection: ['Alcool',
+                      'Aperitif',
+                      'Bière',
                      'Boisson Fraîche',
                      'Boisson chaude',
-                     'Jus de fruits Frais',
                      'Cocktail',
-                     'Bière',
-                     'Vin',
-                     'Alcool',
-                     'Thé & Café froid']%>
+                     'Jus de fruits Frais',
+                     'Liqueur',
+                     'Thé & Café froid',
+                     'Vin'
+                    ]%>
         <%= f.input :subcat,
                     label: 'Galopin / Demi / Pinte',
                     collection: ['Galopin',
@@ -56,5 +58,5 @@
                 as: :file %>
 
 
-    <p><%= f.submit "+ 1 DRINK DE PLUS", class: "btn btn-block btn-primary" %></p>
+    <p><%= f.submit "SAUVEGARDER", class: "btn btn-block btn-primary" %></p>
   <% end %>
