@@ -1,0 +1,4 @@
+@mixin link-hover($bg, $color: '') {
+  background-color: mix($bg, black, 90%);
+  @content;
+}

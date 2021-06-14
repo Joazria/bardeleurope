@@ -1,0 +1,22 @@
+.quickmenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1 1 50%;
+  &__link {
+    display: grid;
+    place-items: center;
+    min-height: 60px;
+
+    box-shadow: $box-shadow;
+    color: $gray;
+    text-decoration: none !important;
+    &:last-child {
+      grid-column: span 2;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-family: $body-font;
+  }
+  .selected { background: $blue; color: $white; }
+}

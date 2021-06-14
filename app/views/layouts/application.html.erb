@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <title>BAR DE L'EUROPE</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag "favicon.ico" %>
     <meta name="description" content="Bar de l'Europe, nous sommes á votre disposition pour vous proposer les meilheurs produits de notre belle région autonome">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload", defer: true %>
   </head>
 
-  <body>
-    <div class="container">
-      <%= render 'shared/navbar' %>
-      <%= render 'shared/flashes' %>
-
+  <body class="home">
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <%= render "shared/quickmenu" %>
+    <main class="home__menu">
       <%= yield %>
-
-
-      <hr>
-    <%= render 'shared/quickmenu' %>
-      <%= render 'shared/footer' %>
-    </div>
-
+    </main>
+    <%= render "shared/footer" %>
   </body>
 </html>

@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.home {
+  margin: 0;
+  padding: 1ch;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
+  background-image: 
+    linear-gradient(
+      rgba(255,255,255,0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url('ricepaper2.jpg');
+  &__menu {
+    width: 100%;
+    box-shadow: $box-shadow;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1ch;
+    place-items: center;
+    padding: 2ch 1ch;
+  }
+}

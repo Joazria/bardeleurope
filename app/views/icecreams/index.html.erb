@@ -1,49 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/numama/image/upload/v1621797241/EUROPE/icecream_wn1nbo.jpg);">
-  <div class="container">
-    <h1>GLACES ARTISANALES</h1>
-    <p>SMaître Artisan Glacier José  Salge</p>
-
-    <h5>Goutez á nos glaces artisanales </h5>
-  </div>
-</div>
-
-
-
-
-<div class="d-flex justify-content-center">
-
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-  <% @icecreams.each do |icecream| %>
-    <% if user_signed_in?  %>
-          <div class="col">
-          <div class="card-beer m-2">
-            <%= image_tag icecream.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= icecream.name %></h5>
-                <h6 class="card-title"><%= icecream.description %></h6>
-                <hr>
-                <p class="card-text text-right"><small class="text-muted">  € <%= icecream.price %> </small></p>
-                <%= link_to "edit", edit_icecream_path(icecream), class: "btn btn-sm btn-outline-primary"  %>
-              </div>
+<% @icecreams.each do |icecream| %>
+  <% if user_signed_in?  %>
+      <div class="card-product">
+        <%= image_tag icecream.photo ,  class: "card-product__img", alt: "Card image cap" %>
+        <div class="card-product__infos">
+          <h5 class="card-product__title"><%= icecream.name %></h5>
+            <p class="card-product__description"><%= icecream.description %></p>
+            <p class="card-product__price"><small class="text-muted">  € <%= icecream.price %> </small></p>
+            <%= link_to "edit", edit_icecream_path(icecream), class: "btn btn-sm btn-outline-primary"  %>
           </div>
-        </div>
+      </div>
 
-    <% else %>
-          <div class="col">
-          <div class="card-beer m-2">
-            <%= image_tag icecream.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= icecream.name %></h5>
-                <h6 class="card-title"><%= icecream.description %></h6>
-                <hr>
-                <p class="card-text text-right"><small class="text-muted">  € <%= icecream.price %> </small></p>
+  <% else %>
+          <div class="card-product">
+            <%= image_tag icecream.photo ,  class: "card-product__img", alt: "Card image cap" %>
+            <div class="card-product__infos">
+              <h5 class="card-product__title"><%= icecream.name %></h5>
+              <p class="card-product__description"><%= icecream.description %></p>
+              <p class="card-product__price"><small class="text-muted">  € <%= icecream.price %> </small></p>
             </div>
-          </div>
-        </div>
-        <% end %>
+          </div
   <% end %>
-
-
-  </div>
-</div>
+<% end %>

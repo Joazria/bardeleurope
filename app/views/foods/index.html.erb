@@ -1,49 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/numama/image/upload/v1621792122/Captura_de_Tela_2021-05-23_a%CC%80s_14.47.55_ns05ht.png);">
-  <div class="container">
-    <h1>BAR DE L'EUROPE</h1>
-    <p>SAN FIURENZU</p>
-
-    <h5>Tous nos produits sont issus du terroir local  et de l'agriculture biologique</h5>
-  </div>
-</div>
-
-
-
-
-<div class="d-flex justify-content-center">
-
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
   <% @foods.each do |food| %>
     <% if user_signed_in?  %>
-          <div class="col">
-          <div class="card-beer m-2">
-            <%= image_tag food.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= food.name %></h5>
-                <h6 class="card-title"><%= food.description %></h6>
-                <hr>
-                <p class="card-text text-right"><small class="text-muted">  € <%= food.price %> </small></p>
+          <div class="card-product m-2">
+            <%= image_tag food.photo ,  class: "card-product__img", alt: "Card image cap" %>
+            <div class="card-product__infos">
+              <h5 class="card-product__title"><%= food.name %></h5>
+                <p class="card-product__description"><%= food.description %></p>
+                <p class="card-product__price"><small class="text-muted">  € <%= food.price %> </small></p>
                 <%= link_to "edit", edit_food_path(food), class: "btn btn-sm btn-outline-primary"  %>
               </div>
           </div>
-        </div>
 
     <% else %>
-          <div class="col">
-          <div class="card-beer m-2">
-            <%= image_tag food.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= food.name %></h5>
-                <h6 class="card-title"><%= food.description %></h6>
-                <hr>
-                <p class="card-text text-right"><small class="text-muted">  € <%= food.price %> </small></p>
+          <div class="card-product m-2">
+            <%= image_tag food.photo ,  class: "card-product__img", alt: "Card image cap" %>
+            <div class="card-product__infos">
+              <h5 class="card-product__title"><%= food.name %></h5>
+                <p class="card-product__description"><%= food.description %></p>
+                <p class="card-product__price"><small class="text-muted">  € <%= food.price %> </small></p>
             </div>
           </div>
-        </div>
         <% end %>
   <% end %>
-
-
-  </div>
-</div>
