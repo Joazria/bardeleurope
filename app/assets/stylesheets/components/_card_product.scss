@@ -2,19 +2,21 @@
   min-height: 120px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: top;
   flex-wrap: nowrap;
   gap: 1ch;
+  padding: 1ch;
 
   color: $gray;
   &__img {
-    height: 100px;
+    height: 120px;
     width: 120px;
     object-fit: cover;
   }
   &__infos {
     display: grid;
     place-items: start;
+    flex-grow: 1;
     gap: 0.6ch;
   }
   &__title {
