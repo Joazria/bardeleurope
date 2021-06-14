@@ -1,12 +1,12 @@
-<% if user_signed_in?  %>
-  <% @drinks.where(category: 'Vin').each do |drink| %>
+<% if user_signed_in? %>
+  <% @drinks.where(category: "Vin").each do |drink| %>
   <div class="card-product mt-2">
-      <%= image_tag drink.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
+      <%= image_tag drink.photo, class: "card-img-top p-1 ", alt: "Card image cap" %>
     <div class="card-product-infos p-2">
       <h2 class="text-uppercase"> <%= drink.name %> </h2>
       <h6> <%= drink.description %></h6>
-      <div class="d-flex justify-content-between">
-        <%= link_to "edit", edit_drink_path(drink), class: "btn btn-sm btn-outline-primary"  %>
+      <div class="d-flex justify-content-around flex-column">
+        <%= link_to "edit", edit_drink_path(drink), class: "btn btn-sm btn-outline-primary" %>
       <h6 class="text-muted"> <%= drink.cl %> | € <%= drink.price %></h6>
       </div>
 
@@ -14,9 +14,9 @@
   </div>
   <% end %>
 <% else %>
-  <% @drinks.where(category: 'Vin').each do |drink| %>
+  <% @drinks.where(category: "Vin").each do |drink| %>
   <div class="card-product mt-2">
-      <%= image_tag drink.photo ,  class: "card-img-top p-1 ", alt: "Card image cap" %>
+      <%= image_tag drink.photo, class: "card-img-top p-1 ", alt: "Card image cap" %>
     <div class="card-product-infos p-2">
       <h2 class="text-uppercase"> <%= drink.name %> </h2>
       <h6> <%= drink.description %></h6>
