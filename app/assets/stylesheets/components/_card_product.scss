@@ -1,35 +1,40 @@
 .card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  min-height: 120px;
   display: flex;
   align-items: center;
-
-    img {
+  flex-wrap: nowrap;
+  gap: 1ch;
+  
+  color: $gray;
+  &__img {
     height: 100%;
     width: 120px;
     object-fit: cover;
   }
-
-  h2 {
-    font-size: 16px;
+  &__infos {
+    display: grid;
+    place-items: start;
+    gap: 0.6ch;
+  }
+  &__title {
+    color: $blue;
+    font-size: 1.4rem;
+    font-family: $body-font;
     font-weight: bold;
     margin: 0;
   }
-
-  p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  &__description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+  }
+  &__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-self: end;
+    margin-top: 1ch;
+    margin-bottom: 0;
   }
 }
 
-
-
-
-.card-product .card-product-infos {
-  padding: 16px;
-}

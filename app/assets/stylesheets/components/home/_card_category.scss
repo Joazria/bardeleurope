@@ -1,0 +1,44 @@
+.card-category {
+  --grow: 0;
+  min-width: 120px;
+  height: max(60px, 90px);
+
+  display: grid;
+  place-items: center;
+  flex-shrink: 1;
+  flex-grow: var(--grow);
+  flex-basis: 50%;
+
+  color: $gray;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  text-decoration: none !important;
+
+  background-size: cover;
+  background-position: center;
+  border: none;
+  box-shadow: $box-shadow;
+}
+
+.card {
+  width: clamp(120px, 100%, 180px) !important;
+}
+
+.card-beer {
+  width: clamp(300px, 100%, 180px) !important;
+  background: white;
+}
+
+.card-columns {
+  display: grid;
+  --card-width: 180px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+  gap: 2ch;
+  place-items: center;
+
+  @media screen and (max-width: 500px) {
+    --card-width: 120px;
+  }
+}

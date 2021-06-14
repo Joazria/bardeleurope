@@ -1,35 +1,12 @@
-<div class="card-group text-uppercase justify-content-between">
-  <div class="col-sm-3 m-1">
-    <%= link_to petitdejeuner_path do  %>
-      <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url(https://res.cloudinary.com/numama/image/upload/v1620302282/EUROPE/petitdej_iuztc2.png)">
-        P'tit Dejeuner
-        <!-- breakfast -->
-      </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3 m-1">
-    <%= link_to drinks_path do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-            url(https://res.cloudinary.com/numama/image/upload/v1619052167/EUROPE/Ribela_fjazsc.png)">
-        Une P'tite Soif
-      </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3 m-1">
-    <%= link_to icecreams_path do %>
-      <div class="card-category text-uppercase" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-      url(https://res.cloudinary.com/numama/image/upload/v1619052174/EUROPE/dessert_jj8nwn.png)">
-        Une P'tite Douceur
-      </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3 m-1">
-    <%= link_to foods_path do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-      url(https://res.cloudinary.com/numama/image/upload/v1619051941/EUROPE/salade_m1bva7.jpg)">
-        Une P'tite Faim
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= link_to petitdejeuner_path, :class=> "card-category"  do  %>
+    P'tit Dejeuner
+<% end %>
+<%= link_to drinks_path, :class=> "card-category " do %>
+    Une P'tite Soif
+<% end %>
+<%= link_to icecreams_path, :class=> "card-category " do %>
+    Une P'tite Douceur
+<% end %>
+<%= link_to foods_path, :class=> "card-category " do %>
+    Une P'tite Faim
+<% end %>

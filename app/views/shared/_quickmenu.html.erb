@@ -1,29 +1,29 @@
-<div class="container d-flex justify-content-between mt-2 text-primary quickmenu">
+<% current_uri = request.env["PATH_INFO"] %>
 
-    <%= link_to chauds_path do  %>
-    <h3><i class="fas fa-coffee"></i></h3>
+<section class="quickmenu">
+  <%= link_to chauds_path, :class => current_uri === "/chauds" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Chauds</h3>
   <% end %>
-     <%= link_to aperitifs_path do  %>
-    <h3><i class="fas fa-glass-cheers"></i></h3>
-  <% end %>
-
-  <%= link_to cocktails_path do  %>
-    <h3><i class="fas fa-cocktail"></i></h3>
+  <%= link_to aperitifs_path, :class => current_uri === "/aperitifs" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Aperitifs</h3>
   <% end %>
 
-    <%= link_to beers_path do  %>
-    <h3><i class="fas fa-beer"></i></h3>
-  <% end %>
-    <%= link_to vins_path do  %>
-    <h3><i class="fas fa-wine-bottle"></i></h3>
+  <%= link_to cocktails_path, :class => current_uri === "/cocktails" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Cocktails</h3>
   <% end %>
 
-   <%= link_to foods_path do  %>
-    <h3><i class="fas fa-utensils"></i></h3>
-  <% end %>
-     <%= link_to icecreams_path do  %>
-    <h3><i class="fas fa-ice-cream"></i></h3>
+  <%= link_to beers_path, :class => current_uri === "/beers" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Beers</h3>
   <% end %>
 
+  <%= link_to vins_path, :class => current_uri === "/vins" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Vins</h3>
+  <% end %>
 
-</div>
+  <%= link_to foods_path, :class => current_uri === "/foods" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Foods</h3>
+  <% end %>
+  <%= link_to icecreams_path, :class => current_uri === "/icecreams" ? "quickmenu__link selected" : "quickmenu__link" do %>
+    <h3 class="quickmenu__title">Icecreams</h3>
+  <% end %>
+</section>
