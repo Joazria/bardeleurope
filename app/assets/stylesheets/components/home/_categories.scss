@@ -2,5 +2,9 @@
   display: flex;
   flex-flow: wrap;
   flex-grow: 1;
-  place-items: center
+  place-items: center;
+  @media screen and (min-width: 420px) {
+    width: 100%;
+    grid-row: 1 / 2;
+  }
 }

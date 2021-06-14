@@ -5,7 +5,7 @@
     <div class="card-product__infos">
       <h2 class="card-product__title"> <%= drink.name %> </h2>
       <p class="card-product__description"> <%= drink.description %></p>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-around flex-column">
         <%= link_to "edit", edit_drink_path(drink), class: "btn btn-sm btn-outline-primary" %>
         <p class="card-product__price"> <%= drink.cl %> | € <%= drink.price %></p>
       </div>
