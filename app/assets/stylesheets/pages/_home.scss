@@ -19,7 +19,7 @@
     box-shadow: $box-shadow;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1ch;
+    gap: 2ch 1ch;
     place-items: center;
     padding: 2ch 1ch;
   }

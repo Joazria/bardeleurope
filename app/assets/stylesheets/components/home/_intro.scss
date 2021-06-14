@@ -10,6 +10,11 @@
 
   line-height: 1.4;
   box-shadow: $box-shadow;
+  @media screen and (min-width: 420px) {
+    width: 100%;
+    max-width: initial;
+    grid-row: 2 / 3;
+  }
   &__img {
     max-width: 320px;
     width: 100%;
