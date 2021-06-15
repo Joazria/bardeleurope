@@ -1,5 +1,5 @@
 <% current_uri = request.env["PATH_INFO"] %>
-
+<h2 class="quickmenu__main-title">Main Menu</h2>
 <section class="quickmenu">
   <%= link_to chauds_path, :class => current_uri === "/chauds" ? "quickmenu__link selected" : "quickmenu__link" do %>
     <h3 class="quickmenu__title">Chauds</h3>
