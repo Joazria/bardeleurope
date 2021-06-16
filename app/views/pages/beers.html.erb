@@ -148,18 +148,18 @@
     </div>
   </div>
   <% end %>
-<% else %>
+<%# else %>
 
-  <% @drinks.where(category: "Bière", subcat: "Bouteille").each do |drink| %>
+<!--   <%# @drinks.where(category: "Bière", subcat: "Bouteille").each do |drink| %>
   <div class="card-product">
-      <%= image_tag drink.photo, class: "card-product__img", alt: "Card image cap" %>
+      <%#= image_tag drink.photo, class: "card-product__img", alt: "Card image cap" %>
     <div class="card-product__infos">
-      <h2 class="card-product__title"> <%= drink.name %> </h2>
-      <p class="card-product__description"> <%= drink.description %></p>
-      <p class="card-product__price"> <%= drink.cl %> | € <%= drink.price %></p>
+      <h2 class="card-product__title"> <%#= drink.name %> </h2>
+      <p class="card-product__description"> <%#= drink.description %></p>
+      <p class="card-product__price"> <%#= drink.cl %> | € <%#= drink.price %></p>
 
     </div>
   </div>
-  <% end %>
-<% end %>
+  <%# end %>
+<%# end %> -->
 
