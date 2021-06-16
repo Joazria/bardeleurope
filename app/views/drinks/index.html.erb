@@ -1,42 +1,64 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/numama/image/upload/v1619053648/EUROPE/cocktails_hg43il.jpg);">
-  <div class="container">
-    <h1>BAR DE L'EUROPE</h1>
-    <p>SAN FIURENZU</p>
+<h2 class="drinks__title">Drinks</h2>
+<%= render 'shared/drinks_category' %>
 
-    <h5>Nous réouvrons bientôt ;-) </h5>
-  </div>
+<div class="drinks">
+
+  <h2 class="drinks__title">By category</h2>
+  
+  <details class="drinks__details">
+    <summary class="drinks__summary">Epcot Center</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Boisson Fraîche" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Thé et Café froid</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Thé & Café froid" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Boisson Chaude</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Boisson chaude" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Petit déjeuner</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Petit Dej" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Jus de fruits frais</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Jus de fruits Frais" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Cocktail</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Cocktail" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Bière</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Bière" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Le vin des copains</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Vin" } %>
+  </details>
+    
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Alcool</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Alcool" } %>
+  </details>
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Apéritif</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Aperitif" } %>
+  </details>
+    
+
+  <details class="drinks__details">
+    <summary class="drinks__summary">Liqueur</summary>
+    <%= render 'shared/product_card', :locals=> { :category => "Liqueur" } %>
+  </details>
 </div>
-    <%= render 'shared/drinks_category' %>
-
-  <h5 class="text-primary text-center mt-5">Boisson Fraîche</h5>
-    <%= render 'shared/softs' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Thé et Café froid</h1>
-   <%= render 'shared/cafesfroids' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Boisson Chaude</h1>
-    <%= render 'shared/chauds' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Petit déjeuner</h1>
-    <%= render 'shared/petitdejeuner' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Jus de fruits frais</h1>
-    <%= render 'shared/jusfrais' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Cocktail</h1>
-    <%= render 'shared/cocktails' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Bière</h1>
-    <%= render 'shared/beers' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Le vin des copains</h1>
-    <%= render 'shared/vins' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Alcool</h1>
-    <%= render 'shared/alcool' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Apéritif</h1>
-    <%= render 'shared/aperitifs' %>
-  <hr>
-  <h1 class="text-primary text-center mt-3">Liqueur</h1>
-    <%= render 'shared/liqueurs' %>

@@ -18,5 +18,22 @@
     font-weight: bold;
     font-family: $body-font;
   }
+  &__main-title {
+    box-shadow: $box-shadow;
+    justify-self: center;
+    flex: 1 1 100%;
+    width: max-content;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: $body-font;
+
+    position: relative;
+    padding: 2ch 0 1ch;
+    margin: 0;
+  }
   .selected { background: $blue; color: $white; }
 }

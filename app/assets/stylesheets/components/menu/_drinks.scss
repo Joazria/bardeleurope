@@ -1,0 +1,42 @@
+.drinks {
+  grid-column: 1 / -1;
+  place-items: center;
+  display: grid;
+  width: 100%;
+  &__title {
+    grid-column: 1 / -1;
+    width: max-content;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: $body-font;
+
+    position: relative;
+    margin-bottom: 1ch;
+  }
+  
+  &__details {
+    width: 100%;
+    padding: 1ch 0.5ch;
+    box-shadow: $box-shadow;
+    &[open] summary ~ * {
+      animation: sweep .5s ease-in-out;
+    }
+  }
+
+  &__summary {
+    color: $gray;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-left: 1ch;
+  }
+}
+
+
+@keyframes sweep {
+  0%    {opacity: 0; transform: translateX(-10px)}
+  100%  {opacity: 1; transform: translateX(0)}
+}
