@@ -2,28 +2,28 @@
 <h2 class="quickmenu__main-title">Menu Principal</h2>
 <section class="quickmenu">
   <%= link_to chauds_path, :class => current_uri === "/chauds" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Chauds</h3>
+    <h3 class="quickmenu__title">Chaud</h3>
   <% end %>
   <%= link_to aperitifs_path, :class => current_uri === "/aperitifs" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Aperitifs</h3>
+    <h3 class="quickmenu__title">Aperitif</h3>
   <% end %>
 
   <%= link_to cocktails_path, :class => current_uri === "/cocktails" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Cocktails</h3>
+    <h3 class="quickmenu__title">Cocktail</h3>
   <% end %>
 
   <%= link_to beers_path, :class => current_uri === "/beers" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Bières</h3>
+    <h3 class="quickmenu__title">Bière</h3>
   <% end %>
 
   <%= link_to vins_path, :class => current_uri === "/vins" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Vins</h3>
+    <h3 class="quickmenu__title">Vin</h3>
   <% end %>
 
   <%= link_to foods_path, :class => current_uri === "/foods" ? "quickmenu__link selected" : "quickmenu__link" do %>
     <h3 class="quickmenu__title">P'tite Faim</h3>
   <% end %>
   <%= link_to icecreams_path, :class => current_uri === "/icecreams" ? "quickmenu__link selected" : "quickmenu__link" do %>
-    <h3 class="quickmenu__title">Glaces</h3>
+    <h3 class="quickmenu__title">Glace</h3>
   <% end %>
 </section>
