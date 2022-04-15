@@ -5,9 +5,12 @@
       <img src="http://res.cloudinary.com/numama/image/upload/c_scale,h_40/v1619043742/EUROPE/logo_europe_j2gxmi.jpg" />
     </a>
     <div class="footer__container" style="--direction: row;">
-      <a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="footer__social"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="footer__social"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/europe_sanfiurenzu/" class="footer__social"><i class="fab fa-instagram"></i></a>
+     <% if user_signed_in? %>
+      <%= link_to dashboard_path, class:"footer__social" do  %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    <% end %>
     </div>
   </div>
 

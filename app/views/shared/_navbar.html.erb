@@ -2,5 +2,10 @@
   <a class="custom-nav__img" href="/">
     <img src="http://res.cloudinary.com/numama/image/upload/c_scale,h_40/v1619043742/EUROPE/logo_europe_j2gxmi.jpg" />
   </a>
-  <%# <%= link_to 'Dashboard', dashboard_path, :class => 'custom-nav__link' %>
+   <% if user_signed_in? %>
+      <%= link_to dashboard_path, :class => 'custom-nav__link' do  %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    <% end %>
+
 </nav>
